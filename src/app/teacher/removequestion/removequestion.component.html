@@ -1,0 +1,144 @@
+<!--
+<div class="jumbotron">
+    <div class="container">
+        <h1 class="display-3">Course Title</h1>
+        <p>Course Description : This is a template for a simple marketing or informational website. It includes a large callout
+            called a jumbotron and three supporting pieces of content. Use it as a starting point to create something more
+            unique.
+        </p>
+    </div>
+</div>
+
+<div class="container">
+    <div class="row">
+        <div class="accordion" id="accordionExample">
+            
+            
+            
+            <div class="card">
+                <div class="card-header" id="headingOne">
+                    <h2 class="mb-0">
+                        <button class="btn btn-danger pull-right" (click)="deleteStudent(student)"> Delete </button>
+                        <button type="button" class="btn btn-link" data-toggle="collapse" data-target="#collapseOne">1. What is HTML?</button>
+                    </h2>
+                </div>
+                <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample">
+                    <div class="card-body">
+                        <p>
+                            <strong>Option1 :</strong> HTML stands for HyperText Markup Language. HTML is the standard markup language
+                            for describing the structure of web pages
+                        </p>
+                        <p>
+                            <strong>Option2 :</strong> HTML stands for HyperText Markup Language. HTML is the standard markup language
+                            for describing the structure of web pages
+                        </p>
+                        <p>
+                            <strong>Option3 :</strong> HTML stands for HyperText Markup Language. HTML is the standard markup language
+                            for describing the structure of web pages
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-header" id="headingTwo">
+                    <h2 class="mb-0">
+                        <button class="btn btn-danger pull-right" (click)="deleteStudent(student)"> Delete </button>
+                        <button type="button" class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseTwo">2. What is Bootstrap?</button>
+                    </h2>
+                </div>
+                <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
+
+                    <div class="card-body">
+                        <p>
+                            <strong>Option1 :</strong> Bootstrap is a sleek, intuitive, and powerful front-end framework for faster
+                            and easier web development. It is a collection of CSS and HTML conventions.
+                        </p>
+                    </div>
+                    <div class="card-body">
+                        <p>
+                            <strong>Option2 :</strong> Bootstrap is a sleek, intuitive, and powerful front-end framework for faster
+                            and easier web development. It is a collection of CSS and HTML conventions.
+                        </p>
+                    </div>
+                    <div class="card-body">
+                        <p>
+                            <strong>Option3 :</strong> Bootstrap is a sleek, intuitive, and powerful front-end framework for faster
+                            and easier web development. It is a collection of CSS and HTML conventions.
+                        </p>
+                    </div>
+                    <div class="card-body">
+                        <p>
+                            <strong>Option4 :</strong> Bootstrap is a sleek, intuitive, and powerful front-end framework for faster
+                            and easier web development. It is a collection of CSS and HTML conventions.
+                        </p>
+                    </div>
+                    <div class="card-body">
+                        <p>
+                            <strong>Option5 :</strong>Bootstrap is a sleek, intuitive, and powerful front-end framework for faster
+                            and easier web development. It is a collection of CSS and HTML conventions.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="card">
+                <div class="card-header" id="headingThree">
+                    <h2 class="mb-0">
+                        <button class="btn btn-danger pull-right" (click)="deleteStudent(student)"> Delete </button>
+                        <button type="button" class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseThree">3. What is CSS?</button>
+                    </h2>
+                </div>
+                <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordionExample">
+                    <div class="card-body">
+                        <div class="card-body">
+                            <p>
+                                <strong>Option1 :</strong> SS stands for Cascading Style Sheet. CSS allows you to specify various
+                                style properties for a given HTML element such as colors, backgrounds, fonts etc.
+                            </p>
+                            <p>
+                                <strong>Option2 :</strong> SS stands for Cascading Style Sheet. CSS allows you to specify various
+                                style properties for a given HTML element such as colors, backgrounds, fonts etc.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+-->
+<div class="container">
+    <div class="row">
+        <div class="accordion" id="accordionExample">
+            
+            <tr *ngFor="let question of questions">
+            
+            <div class="card">
+                <div class="card-header" id="headingOne">
+                    <h2 class="mb-0">
+                        <button class="btn btn-danger pull-right" (click)="deleteQuestion(question)"> Delete </button>
+                        <button type="button" class="btn btn-link" data-toggle="collapse" data-target="#collapseOne">{{question.questiontext}}</button>
+                    </h2>
+                </div>
+                <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample">
+                    <div class="card-body">
+                        <p>
+                            <strong>Option1 :</strong>  {{question.opt1}}
+                        </p>
+                        <p>
+                            <strong>Option2 :</strong> {{question.opt2}}
+                        </p>
+                        <p>
+                            <strong>Option3 :</strong> {{question.opt3}}
+                        </p>
+                        <p>
+                            <strong>Option4 :</strong> {{question.opt4}}
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </tr>
+        </div>
+    </div>
+</div>

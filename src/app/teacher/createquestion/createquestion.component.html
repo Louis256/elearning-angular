@@ -1,0 +1,194 @@
+<!--
+<div class="jumbotron">
+    <div class="container">
+        <h1 class="display-3">Add Question</h1>
+        <p>This is a template for a simple marketing or informational website. It includes a large callout called a jumbotron
+            and three supporting pieces of content. Use it as a starting point to create something more unique.
+        </p>
+    </div>
+</div>
+
+<div class="col-md-12">
+    <div class="container">
+        <form>
+            <div class="form-group">
+                <label for="questiontext">Question Text</label>
+                <textarea type="text" name="questiontext" class="form-control" id="questiontext" rows="3"> </textarea>
+            </div>
+
+            <div class="form-group">
+                <label for="option5">Question Image</label>
+                <div class="input-group mb-3">
+
+                    <div class="input-group-prepend">
+                        <span class="input-group-text">Upload</span>
+                    </div>
+                    <div class="custom-file">
+                        <input type="file" class="custom-file-input" id="inputGroupFile01">
+                        <label class="custom-file-label" for="inputGroupFile01">Choose file</label>
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="option1">Option 1</label>
+                <div class="input-group mb-3">
+                    <div class="input-group-prepend">
+                        <div class="input-group-text">
+                            <input type="checkbox" aria-label="Checkbox for following text input">
+                        </div>
+                    </div>
+                    <input type="text" placeholder="First Option" name="option1" class="form-control" id="option1">
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="option2">Option 2</label>
+                <div class="input-group mb-3">
+                    <div class="input-group-prepend">
+                        <div class="input-group-text">
+                            <input type="checkbox" aria-label="Checkbox for following text input">
+                        </div>
+                    </div>
+                    <input type="text" placeholder="Second Option" name="option2" class="form-control" id="option2">
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="option3">Option 3</label>
+                <div class="input-group mb-3">
+                    <div class="input-group-prepend">
+                        <div class="input-group-text">
+                            <input type="checkbox" aria-label="Checkbox for following text input">
+                        </div>
+                    </div>
+                    <input type="text" placeholder="Third Option" name="option3" class="form-control" id="option3">
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="option4">Option 4</label>
+                <div class="input-group mb-3">
+                    <div class="input-group-prepend">
+                        <div class="input-group-text">
+                            <input type="checkbox" aria-label="Checkbox for following text input">
+                        </div>
+                    </div>
+                    <input type="text" placeholder="Fourth Option" name="option4" class="form-control" id="option4">
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="option5">Option 5</label>
+                <div class="input-group mb-3">
+                    <div class="input-group-prepend">
+                        <div class="input-group-text">
+                            <input type="checkbox" aria-label="Checkbox for following text input">
+                        </div>
+                    </div>
+                    <input type="text" placeholder="Fifth Option" name="option5" class="form-control" id="option5">
+                </div>
+            </div>
+
+            <button class="btn btn-success">Add</button>
+        </form>
+    </div>
+</div>
+-->
+<div class="jumbotron">
+    <div class="container">
+        <h1 class="display-3">Add Question</h1>
+        <p>This is a template for a simple marketing or informational website. It includes a large callout called a jumbotron
+            and three supporting pieces of content. Use it as a starting point to create something more unique.
+        </p>
+    </div>
+</div>
+
+<div class="col-md-12">
+    <div class="container">
+        <form [formGroup]="questionForm" method="post" enctype="multipart/form-data" (ngSubmit)="onSubmit()">
+            <div class="form-group">
+                <label for="questiontext">Question Text</label>
+                <textarea type="text" formControlName="questiontext" 
+                name="questiontext" class="form-control" id="questiontext" rows="3"> </textarea>
+            </div>
+
+            <div class="form-group">
+                <label for="option5">Question Image</label>
+                <div class="input-group mb-3">
+                    <!--
+                    <div class="input-group-prepend">
+                        <span class="input-group-text" >Upload</span>
+                    </div>
+                    
+                    <div class="custom-file">
+                        <input type="file" name="questionimage" (change)="onFileChange($event)"
+                        class="custom-file-input" id="inputGroupFile01">
+                        <label class="custom-file-label" for="inputGroupFile01">{{fileName}}Choose file</label>
+                    </div>-->
+                    <input type="file" (change)="onFileChange($event)" />
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="option1">Option 1</label>
+                <div class="input-group mb-3">
+                    <div class="input-group-prepend">
+                        <div class="input-group-text">
+                            <input type="checkbox" 
+                            aria-label="Checkbox for following text input">
+                        </div>
+                    </div>
+                    <input type="text" formControlName="option1"
+                    placeholder="First Option" name="option1" class="form-control" id="option1">
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="option2">Option 2</label>
+                <div class="input-group mb-3">
+                    <div class="input-group-prepend">
+                        <div class="input-group-text">
+                            <input type="checkbox" 
+                            aria-label="Checkbox for following text input">
+                        </div>
+                    </div>
+                    <input type="text" formControlName="option2"
+                    placeholder="Second Option" name="option2" class="form-control" id="option2">
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="option3">Option 3</label>
+                <div class="input-group mb-3">
+                    <div class="input-group-prepend">
+                        <div class="input-group-text">
+                            <input type="checkbox" 
+                            aria-label="Checkbox for following text input">
+                        </div>
+                    </div>
+                    <input type="text" formControlName="option3"
+                    placeholder="Third Option" name="option3" class="form-control" id="option3">
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="option4">Option 4</label>
+                <div class="input-group mb-3">
+                    <div class="input-group-prepend">
+                        <div class="input-group-text">
+                            <input type="checkbox" 
+                            aria-label="Checkbox for following text input">
+                        </div>
+                    </div>
+                    <input type="text" formControlName="option4"
+                    placeholder="Fourth Option" name="option4" class="form-control" id="option4">
+                </div>
+            </div>
+
+        
+
+            <button class="btn btn-success">Add</button>
+        </form>
+    </div>
+</div>

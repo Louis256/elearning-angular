@@ -1,0 +1,64 @@
+<header>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div>
+            <a href="/" class="navbar-brand">ELearning Management</a>
+        </div>
+        <div class="expand navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true"
+                        aria-expanded="false">
+                        Login
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a routerLink="/login/home" class="dropdown-item">Login Home</a>
+                        <a routerLink="/student/login" class="dropdown-item">Login as Student</a>
+                        <a routerLink="/teacher/login" class="dropdown-item">Login as Teacher</a>
+                    </div>
+                </li>
+
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true"
+                        aria-expanded="false">
+                        Student
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a routerLink="/student/selectcourse" class="dropdown-item">Select Course</a>
+                        <a routerLink="/student/viewdashboard" class="dropdown-item">View Dashboard</a>
+                    </div>
+                </li>
+
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true"
+                        aria-expanded="false">
+                        Teacher
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a routerLink="/teacher/home" class="dropdown-item">Home</a>
+                        <a routerLink="/teacher/createcourse" class="dropdown-item">Create Course</a>
+                        <a routerLink="/teacher/select-course-to-updatecourse" class="dropdown-item">Update Course</a>
+                        <a routerLink="/teacher/select-course-to-addquestion" class="dropdown-item">Add Question</a>
+                        <a routerLink="/teacher/select-course-to-removequestion" class="dropdown-item">Remove Question</a>
+                    </div>
+                </li>
+
+                <!--
+                <li class="nav-item">
+                    <a routerLink="/teacher/createcourse" class="nav-link">Create Course</a>
+                </li>
+                <li class="nav-item">
+                    <a routerLink="/teacher/select-course-to-addquestion" class="nav-link">Add Question</a>
+                </li>
+                <li class="nav-item">
+                    <a routerLink="/teacher/select-course-to-removequestion" class="nav-link">Remove Question</a>
+                </li>
+            -->
+            </ul>
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a routerLink="/student/logout" class="nav-link"(click)=logout()>Logout</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+</header>

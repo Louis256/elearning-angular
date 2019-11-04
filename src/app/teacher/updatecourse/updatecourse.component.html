@@ -1,0 +1,145 @@
+<!--
+<div class="jumbotron">
+        <div class="container">
+            <h1 class="display-3">Update the course</h1>
+            <p>This is a template for a simple marketing or informational website. It includes a large callout called a jumbotron
+                and three supporting pieces of content. Use it as a starting point to create something more unique.
+            </p>
+        </div>
+    </div>
+    
+    <div class="col-md-12">
+        <div class="container">
+            <form>
+                <div class="form-group">
+                    <label for="name">Course Name</label>
+                    <input type="text" placeholder="Course Name" name="name" class="form-control" id="name">
+                </div>
+    
+                <div class="form-group">
+                    <label for="description">Description</label>
+                    <textarea type="text" name="description" class="form-control" id="description" rows="3"> </textarea>
+                </div>
+    
+                <div class="form-group">
+                    <label for="category">Category</label>
+                    <select class="form-control" name="category" id="category">
+                        <option value="">Select...</option>
+                        <option value="computerscience">Computer Science</option>
+                        <option value="general">General</option>
+                        <option value="mathematics">Mathematics</option>
+                        <option value="others">Others</option>
+                    </select>
+                </div>
+    
+                <div class="form-group">
+                    <label for="difficultylevel">Difficulty Level</label>
+                    <select class="form-control" name="difficultylevel" id="difficultylevel">
+                        <option value="">Select...</option>
+                        <option value="beginner">Beginner</option>
+                        <option value="intermediate">Intermediate</option>
+                        <option value="advanced">Advanced</option>
+                    </select>
+                </div>
+    
+                <div class="form-group">
+                    <label for="subscriptionfee">Subscription Fee</label>
+                    <div class="input-group mb-3">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text">$</span>
+                        </div>
+                        <input type="text" placeholder="00.00" name="subscriptionfee" class="form-control" id="subscriptionfee">
+                    </div>
+                </div>
+    
+                <div class="form-group">
+                    <label for="difficultylevel">Is Course Active?</label>
+                    <select class="form-control" name="difficultylevel" id="difficultylevel">
+                        <option value="">Select...</option>
+                        <option value="no">No</option>
+                        <option value="yes">Yes</option>
+                    </select>
+                </div>
+    
+                <a class="btn btn-success" role="button" routerLink="/teacher/select-course-to-addquestion">Update</a>
+            </form>
+        </div>
+    </div>
+    -->
+    <div class="jumbotron">
+        <div class="container">
+            <h1 class="display-3">Update the course</h1>
+            <p>This is a template for a simple marketing or informational website. It includes a large callout called a jumbotron
+                and three supporting pieces of content. Use it as a starting point to create something more unique.
+            </p>
+        </div>
+    </div>
+    
+    <div class="col-md-12">
+        <div class="container">
+            <form [formGroup]="courseForm" (ngSubmit)="onSubmit()">
+    
+    
+                <div class="form-group">
+                    <label for="coursename">Course Name</label>
+                    <input type="text" formControlName="coursename"
+                         placeholder="coursename"
+                        name="coursename" class="form-control" id="coursename">               
+                </div>
+    
+                <div class="form-group">
+                    <label for="description">Description</label>
+                    <textarea type="text" formControlName="description"  
+                    name="description" class="form-control" id="description" rows="3"> </textarea>
+                </div>
+                
+                <div class="form-group">
+                    <label for="category">Category</label>
+                    <select class="form-control" formControlName="category"  
+                    name="category" id="category">
+                        <option value="">Select...</option>
+                        <option value="computerscience">Computer Science</option>
+                        <option value="general">General</option>
+                        <option value="mathematics">Mathematics</option>
+                        <option value="others">Others</option>
+                    </select>
+                </div>
+    
+                <div class="form-group">
+                    <label for="difficultylevel">Difficulty Level</label>
+                    <select class="form-control" formControlName="difficultylevel"
+                    name="difficultylevel" id="difficultylevel">
+                        <option value="">Select...</option>
+                        <option value="beginner">Beginner</option>
+                        <option value="intermediate">Intermediate</option>
+                        <option value="advanced">Advanced</option>
+                    </select>
+                </div>
+    
+                <div class="form-group">
+                    <label for="subscriptionfee">Subscription Fee</label>
+                    <div class="input-group mb-3">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text">$</span>
+                        </div>
+                        <input type="text" formControlName="subscriptionfee"
+                        placeholder="00.00" name="subscriptionfee" class="form-control" 
+                        id="subscriptionfee">
+                    </div>
+                </div>
+    
+                <div class="form-group">
+                    <label for="active">Is Course Active?</label>
+                    <select class="form-control" formControlName="active"
+                    name="active" id="active">
+                        <option value="">Select...</option>
+                        <option value="no">No</option>
+                        <option value="yes">Yes</option>
+                    </select>
+                </div>
+                
+                <button class="btn btn-success">Update Course</button>
+            </form>        
+        </div>
+    </div>
+    

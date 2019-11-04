@@ -1,0 +1,128 @@
+<!--
+<div class="jumbotron">
+    <div class="container">
+        <h1 class="display-3">Select course to remove questions</h1>
+        <p>This is a template for a simple marketing or informational website. It includes a large callout called a jumbotron
+            and three supporting pieces of content. Use it as a starting point to create something more unique.
+        </p>
+    </div>
+</div>
+
+<div class="container">
+    <div class="row">
+        <div class="card-deck">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">Course title</h5>
+                    <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content
+                        is a little bit longer.</p>
+                    <a routerLink="/teacher/removequestion" class="btn btn-primary stretched-link">Go</a>
+                </div>
+
+                <div class="card-footer">
+                    <small class="text-muted">Last updated 3 mins ago</small>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">Course title</h5>
+                    <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content
+                        is a little bit longer.</p>
+                    <a routerLink="/teacher/removequestion" class="btn btn-primary stretched-link">Go</a>
+                </div>
+
+                <div class="card-footer">
+                    <small class="text-muted">Last updated 3 mins ago</small>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">Course title</h5>
+                    <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content
+                        is a little bit longer.</p>
+                    <a routerLink="/teacher/removequestion" class="btn btn-primary stretched-link">Go</a>
+                </div>
+
+                <div class="card-footer">
+                    <small class="text-muted">Last updated 3 mins ago</small>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <br/>
+
+
+    <div class="row">
+        <div class="card-deck">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">Course title</h5>
+                    <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content
+                        is a little bit longer.</p>
+                    <a routerLink="/teacher/removequestion" class="btn btn-primary stretched-link">Go</a>
+                </div>
+
+                <div class="card-footer">
+                    <small class="text-muted">Last updated 3 mins ago</small>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">Course title</h5>
+                    <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content
+                        is a little bit longer.</p>
+                    <a routerLink="/teacher/removequestion" class="btn btn-primary stretched-link">Go</a>
+                </div>
+
+                <div class="card-footer">
+                    <small class="text-muted">Last updated 3 mins ago</small>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">Course title</h5>
+                    <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content
+                        is a little bit longer.</p>
+                    <a routerLink="/teacher/removequestion" class="btn btn-primary stretched-link">Go</a>
+                </div>
+
+                <div class="card-footer">
+                    <small class="text-muted">Last updated 3 mins ago</small>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+-->
+<div class="jumbotron">
+    <div class="container">
+        <h1 class="display-3">Select course to remove questions</h1>
+        <p>This is a template for a simple marketing or informational website. It includes a large callout called a jumbotron
+            and three supporting pieces of content. Use it as a starting point to create something more unique.
+        </p>
+    </div>
+</div>
+
+<div class="container">
+    
+    <div class="row">
+        <div class="card-deck">
+            
+            <tr *ngFor="let course of courses">
+            
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">{{course.coursename}}</h5>
+                    <p class="card-text">{{course.description}}</p>
+                    <button class="btn btn-primary stretched-link" (click)="goToCourseDetails(course)">Go</button>                   
+                </div>
+
+                <div class="card-footer">                  
+                   <small> Last updated <time>{{course.updateddate}}</time></small>
+                </div>
+            </div>
+        </div>
+    </div>
+    <br/>
+</div>
