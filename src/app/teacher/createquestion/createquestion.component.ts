@@ -11,7 +11,7 @@ import { Router, ActivatedRoute } from '@angular/router';
 export class CreatequestionComponent implements OnInit {
 
   questionForm: FormGroup;
-  question: QuestionInfo = new QuestionInfo(0,"", null, "", "", "", "","", 0, 0,"","","");
+  question: QuestionInfo = new QuestionInfo(0,"", null, "", "", "", "","", 0, 0,"","","","");
   submitted = false;
   checkBoxValueoption1: boolean = false;
   checkBoxValueoption2: boolean = false;
@@ -78,6 +78,15 @@ export class CreatequestionComponent implements OnInit {
     formdata.append('opt2',  this.questionForm.get('option2').value);
     formdata.append('opt3',  this.questionForm.get('option3').value);
     formdata.append('opt4',  this.questionForm.get('option4').value);
+    if(this.questionForm.get('answer').value=='A')
+    {formdata.append('answer',  this.questionForm.get('option1').value);}
+    else if(this.questionForm.get('answer').value=='B')
+    {formdata.append('answer',  this.questionForm.get('option2').value);}
+    else if(this.questionForm.get('answer').value=='C')
+    {formdata.append('answer',  this.questionForm.get('option3').value);}
+    else if(this.questionForm.get('answer').value=='D')
+    {formdata.append('answer',  this.questionForm.get('option4').value);}
+    //formdata.append('answer',  this.questionForm.get('answer').value);
     formdata.append('courseid',  this.route.snapshot.params['courseid']);
     //formdata.append('teacherid',  this.questionForm.get('teacherid').value);
     

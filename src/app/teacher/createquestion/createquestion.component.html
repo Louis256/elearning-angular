@@ -98,7 +98,8 @@
 <div class="jumbotron">
     <div class="container">
         <h1 class="display-3">Add Question</h1>
-        <p>This is a template for a simple marketing or informational website. It includes a large callout called a jumbotron
+        <p>This is a template for a simple marketing or informational website. It includes a large callout called a
+            jumbotron
             and three supporting pieces of content. Use it as a starting point to create something more unique.
         </p>
     </div>
@@ -109,8 +110,8 @@
         <form [formGroup]="questionForm" method="post" enctype="multipart/form-data" (ngSubmit)="onSubmit()">
             <div class="form-group">
                 <label for="questiontext">Question Text</label>
-                <textarea type="text" formControlName="questiontext" 
-                name="questiontext" class="form-control" id="questiontext" rows="3"> </textarea>
+                <textarea type="text" formControlName="questiontext" name="questiontext" class="form-control"
+                    id="questiontext" rows="3"> </textarea>
             </div>
 
             <div class="form-group">
@@ -135,12 +136,11 @@
                 <div class="input-group mb-3">
                     <div class="input-group-prepend">
                         <div class="input-group-text">
-                            <input type="checkbox" 
-                            aria-label="Checkbox for following text input">
+                            <input type="checkbox" aria-label="Checkbox for following text input">
                         </div>
                     </div>
-                    <input type="text" formControlName="option1"
-                    placeholder="First Option" name="option1" class="form-control" id="option1">
+                    <input type="text" formControlName="option1" placeholder="First Option" name="option1"
+                        class="form-control" id="option1">
                 </div>
             </div>
 
@@ -149,12 +149,11 @@
                 <div class="input-group mb-3">
                     <div class="input-group-prepend">
                         <div class="input-group-text">
-                            <input type="checkbox" 
-                            aria-label="Checkbox for following text input">
+                            <input type="checkbox" aria-label="Checkbox for following text input">
                         </div>
                     </div>
-                    <input type="text" formControlName="option2"
-                    placeholder="Second Option" name="option2" class="form-control" id="option2">
+                    <input type="text" formControlName="option2" placeholder="Second Option" name="option2"
+                        class="form-control" id="option2">
                 </div>
             </div>
 
@@ -163,12 +162,11 @@
                 <div class="input-group mb-3">
                     <div class="input-group-prepend">
                         <div class="input-group-text">
-                            <input type="checkbox" 
-                            aria-label="Checkbox for following text input">
+                            <input type="checkbox" aria-label="Checkbox for following text input">
                         </div>
                     </div>
-                    <input type="text" formControlName="option3"
-                    placeholder="Third Option" name="option3" class="form-control" id="option3">
+                    <input type="text" formControlName="option3" placeholder="Third Option" name="option3"
+                        class="form-control" id="option3">
                 </div>
             </div>
 
@@ -177,16 +175,25 @@
                 <div class="input-group mb-3">
                     <div class="input-group-prepend">
                         <div class="input-group-text">
-                            <input type="checkbox" 
-                            aria-label="Checkbox for following text input">
+                            <input type="checkbox" aria-label="Checkbox for following text input">
                         </div>
                     </div>
-                    <input type="text" formControlName="option4"
-                    placeholder="Fourth Option" name="option4" class="form-control" id="option4">
+                    <input type="text" formControlName="option4" placeholder="Fourth Option" name="option4"
+                        class="form-control" id="option4">
                 </div>
             </div>
 
-        
+            <div class="form-group">
+                <label for="answer">Correct Answer</label>
+                <select class="form-control" formControlName="answer"  
+                name="answer" id="answer">
+                    <option value="">Select...</option>
+                    <option value="A">A</option>
+                    <option value="B">B</option>
+                    <option value="C">C</option>
+                    <option value="D">D</option>
+                </select>
+            </div>
 
             <button class="btn btn-success">Add</button>
         </form>

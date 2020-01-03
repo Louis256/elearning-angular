@@ -4,6 +4,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
 import { ModalModule } from 'ngx-bootstrap/modal';
 import { ReactiveFormsModule } from '@angular/forms';
+import {NgxPaginationModule} from 'ngx-pagination';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -36,6 +37,7 @@ import { StudentLoginHttpClientService } from './service/student-login-http-clie
 import { TeacherLoginHttpClientService } from './service/teacher-login-http-client.service';
 import { AuthenticationService } from './service/authentication.service';
 import { AuthguardService } from './service/authguard.service';
+import { PagerService } from './service/pager.service';
 
 
 @NgModule({
@@ -73,13 +75,14 @@ import { AuthguardService } from './service/authguard.service';
     BrowserAnimationsModule,
     BsDatepickerModule.forRoot(),
     DatepickerModule.forRoot(),
+    NgxPaginationModule,
     
     
 
 
   ],
   providers: [CourseHttpClientService,QuestionHttpClientService,StudentLoginHttpClientService,
-  TeacherLoginHttpClientService,AuthenticationService,AuthguardService],
+  TeacherLoginHttpClientService,AuthenticationService,AuthguardService,PagerService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

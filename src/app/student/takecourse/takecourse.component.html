@@ -98,99 +98,44 @@
 
 
 <div class="jumbotron">
-    <div class="container">
-        <h1 class="display-3">Contine to take the course</h1>
-        <p>This is a template for a simple marketing or informational website. It includes a large callout called a jumbotron
-            and three supporting pieces of content. Use it as a starting point to create something more unique.
-        </p>
-    </div>
+    <!--
+	<h1> QUIZ</h1>
+	<div class="form-group">
+		<label for="input3" class="col-sm-4 control-label">Search Language for mock test:</label>
+		<div class="col-sm-6">
+
+			<select [(ngModel)]="selectedvalue" (change)="gettinglanguage()">
+    <option *ngFor="let g of languages" [value]="g">{{g}}</option>
+  </select>
+		</div>
+	</div>
+-->
+<div class="jumbotron">
+  <ul>
+{{question}}
+
+  </ul>
+  	<ul *ngFor="let opt of options">
+					<div class="checkbox">
+						<label>
+             <input type="checkbox" (click)="check($event,opt)">
+           {{opt}}
+   <span class="cr"><i class="cr-icon glyphicon glyphicon-ok"></i></span>
+
+
+
+   
+   </label>
+					</div>
+				</ul>
+   <button (click)="previous()"*ngIf="i>0" >previous</button>
+   <button  (click)="next()" *ngIf="i<quizlength">next</button>
+
 </div>
 
-<div class="container">
-    <div class="row">
-        <div class="col-md-3">
-        </div>
-        
-        <div class="col-md-12">
-                <tr *ngFor="let question of questions">
-            <form>
-                
-                <div class="card text-center m-3">
-                    <div class="card-body">
-                        <div class="form-group">
-                            <div>
-                                <strong>{{question.questiontext}}</strong>
-                            </div>
-                        </div>
 
-                        <div class="form-group">
-                            <img src=".." alt="..." class="img-thumbnail">
-                        </div>
 
-                        <div class="form-group">
-                            <div class="input-group mb-3">
-                                <div class="input-group-prepend">
-                                    <div class="input-group-text">
-                                        <input type="checkbox" aria-label="Checkbox for following text input">
-                                    </div>
-                                </div>
-                                <input type="text" disabled placeholder="{{question.opt1}}" name="option1" class="form-control" id="option1">
-                            </div>
-                        </div>
-
-                        <div class="form-group">
-                            <div class="input-group mb-3">
-                                <div class="input-group-prepend">
-                                    <div class="input-group-text">
-                                        <input type="checkbox" aria-label="Checkbox for following text input">
-                                    </div>
-                                </div>
-                                <input type="text" disabled placeholder="{{question.opt2}}" name="option2" class="form-control" id="option2">
-                            </div>
-                        </div>
-
-                        <div class="form-group">
-                            <div class="input-group mb-3">
-                                <div class="input-group-prepend">
-                                    <div class="input-group-text">
-                                        <input type="checkbox" aria-label="Checkbox for following text input">
-                                    </div>
-                                </div>
-                                <input type="text" disabled placeholder="{{question.opt3}}" name="option3" class="form-control" id="option3">
-                            </div>
-                        </div>
-
-                        <div class="form-group">
-                            <div class="input-group mb-3">
-                                <div class="input-group-prepend">
-                                    <div class="input-group-text">
-                                        <input type="checkbox" aria-label="Checkbox for following text input">
-                                    </div>
-                                </div>
-                                <input type="text" disabled placeholder="{{question.opt4}}" name="option4" class="form-control" id="option4">
-                            </div>
-                        </div>
-                        <!--
-                        <div class="form-group">
-                            <div class="input-group mb-3">
-                                <div class="input-group-prepend">
-                                    <div class="input-group-text">
-                                        <input type="checkbox" aria-label="Checkbox for following text input">
-                                    </div>
-                                </div>
-                                <input type="text" disabled placeholder="Fifth Option" name="option5" class="form-control" id="option5">
-                            </div>
-                        </div>
-                    -->
-                    </div>
-                    <div class="card-footer pb-0 pt-3">
-                        <jw-pagination [items]="items" (changePage)="onChangePage($event)"></jw-pagination>
-                    </div>
-                    <a class="btn btn-success" role="button" routerLink="/student/courseresult">Submit</a>
-                </div>
-            </form>
-        </div>
-        <div class="col-md-3"></div>
-
-    </div>
+	<button class="btn btn-info" (click)="generatemark()">submit</button>
 </div>
+
+

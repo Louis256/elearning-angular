@@ -16,7 +16,8 @@ export class QuestionInfo {
     public courseid: number,
     public status: string, 
     public createddate: string,
-    public updateddate: string      
+    public updateddate: string,
+    public selectanswer: string      
   ) { }
 }
 
@@ -29,6 +30,34 @@ export class ShowQuestion {
     public opt3: string,
     public opt4: string,
   ) { }
+}
+
+
+export class Quizmodel {
+
+  ID :number;
+  language:String;
+  question:String;
+  anslistobj:String[];
+  answer:String;
+ 
+  constructor(  ID :number,language:String, question:String,
+  anslistobj:String[], answer:String) {
+  this.ID=ID;
+ this.language=language;
+ this.anslistobj=anslistobj;
+ this.answer=answer;
+ }}
+
+ export class Answermodel
+{
+
+option:String[];
+constructor(option:String[]){
+
+this.option=option;
+
+}
 }
 
 @Injectable({
