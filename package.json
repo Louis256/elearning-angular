@@ -22,7 +22,7 @@
     "@ng-bootstrap/ng-bootstrap": "^5.1.1",
     "@reactivex/rxjs": "^5.5.3",
     "bootstrap": "^4.3.1",
-    "jquery": "^3.4.1",
+    "jquery": "^3.5.0",
     "jw-angular-pagination": "^1.1.0",
     "lodash": "^4.17.15",
     "ng2datepicker": "^2.1.4",
